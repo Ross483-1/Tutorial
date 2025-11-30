@@ -1,13 +1,254 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
+<head class="head">
   <meta charset="UTF-8">
+
+  <!-- if you want to add a desciption to your website -->
+  <meta name="description" content="Free JavaScript Tutorial">
+
+  <!-- If you want write your name for author -->
+  <meta name="author" content="Ross">
+
+  <!-- if somebody is looking at your website from mobile phone you cane change width -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+
+  <!-- If you need an icon for website favicon-->
+  <link rel="icon" type="image/jpg" href="images/Sasha.jpg">
+
+  <title>Tutorial</title>
+  <link rel="stylesheet" href="./styles/style.css">
 </head>
 
-<body>
+<body class="body">
+<!-- The website divides by three main parts Header-Main-Footer -->
+  <header class="header">
+    <h2>HTML TUTORIAL starts here</h2>
+  </header>
+  <main class="main">
+    <!-- =-============================================================================= -->
+    <!-- Main part of the website is divides into sections -->
+      <section class="type-of-headings">
+        <!-- Main heading is h1 because its given main information about website section -->
+        <h1>I like pizza</h1>
+        <h2>I like pizza</h2>
+        <h3>I like pizza</h3>
+        <h4>I like pizza</h4>
+        <h5>I like pizza</h5>
+        <h6>I like pizza</h6>
+      </section>
+      
+      <!-- Horizontal break is often used to divide sections by a lines -->
+      <hr>
+
+      <!-- =-============================================================================= -->
+      <section class="type-of-paragraphs">
+        <!-- To make a paragraph you have to write p -->
+        <p class="this-is-paragraph">This is paragraph</p>
+        <p class="i-like-pizza">I like pizza</p>
+        <!-- To make a sample paragraph you have to write lorem and then tab or enter -->
+        <p class="lorem">Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta libero nisi atque, nemo asperiores obcaecati consequatur rerum blanditiis culpa sit voluptatibus quisquam est quis, omnis voluptas aliquid mollitia, doloribus placeat?</p>
+      </section>
+
+      <hr>
+      
+      <!-- =-============================================================================= -->
+      <section class="type-of-test-formatting">
+        <!-- HTML also have text formatting -->
+        <p>This is normal text</p>
+        <p>This is <b>bold</b> text</p>
+        <p>This is <i>italic</i> text</p>
+        <p>This is <sub>subscript</sub> text</p>
+        <p>This is <small>small</small> text</p>
+        <p>This is <del>deleted</del> text</p>
+        <p>This is <sup>superscript</sup> text</p>
+        <p>This is <big>big</big> text</p>
+        <p>This is <mark>marked</mark> text</p>
+        <p>This is <ins>inserted</ins> text</p>
+      </section>
+
+      <hr>
+
+      <!-- =-============================================================================= -->
+      <section class="type-of-lists">
+        <!-- This is Ordered list -->
+        <h3>Ordered list</h3>
+        <ol>
+          <li>I want to go school</li>
+          <li>I want to go university</li>
+          <li>I want to go to good work</li>
+          <li>I want to have house and a car</li>
+        </ol>
+
+        <!-- This is Unordered list -->
+        <h3>Unordered list</h3>
+        <ul>
+          <li>pizza</li>
+          <li>chips</li>
+          <li>soda</li>
+        </ul>
+
+        <!-- This is Desciption list -->
+        <h3>Desciption list</h3>
+        <dl>
+          <dt>HTML</dt>
+          <dd>is adds structure to website</dd>
+          <dt>CSS</dt>
+          <dd>is adds style to website</dd>
+          <dt>JavaScript</dt>
+          <dd>is adds function to website</dd>
+        </dl>
+      </section>
+
+      <hr>
+
+      <!-- =-============================================================================= -->
+      <section class="tables">
+        <!-- Tables is often used to show timetable of work time -->
+        <h3>Store-Hours</h3>
+        <table bgcolor="black" width="700">
+          <tr bgcolor="grey">
+            <th width="100">Monday</th>
+            <th width="100">Tuesday</th>
+            <th width="100">Wednesday</th>
+            <th width="100">Thusday</th>
+            <th width="100">Friday</th>
+            <th width="100">Saturday</th>
+            <th width="100">Sunday</th>
+          </tr>
+          <tr bgcolor="lightgrey" align="center">
+            <td width="100">9am-7pm</td>
+            <td width="100">9am-7pm</td>
+            <td width="100">9am-7pm</td>
+            <td width="100">9am-7pm</td>
+            <td width="100">9am-7pm</td>
+            <td width="100">9am-5pm</td>
+            <td width="100">Closed</td>
+          </tr>
+        </table>
+      </section>
+
+      <hr>
+      
+      <!-- =-============================================================================= -->
+      <section class="type-of-forms">
+        <!-- There are many tyoe of different forms: names, emails, gender, age -->
+        <form action="action-page.php" method="post">
+          
+          <div>
+            <label for="fname">First name:</label>
+            <input type="text" placeholder="Bob" required>
+          </div>
+
+          <br>
+          
+          <div>
+            <label for="mname">Middle name:</label>
+            <input type="text" placeholder="Square Pants" required>
+          </div>
+          
+          <br>
+
+          <div>
+            <label for="sname">Second name:</label>
+            <input type="text" placeholder="Sponge" required>
+          </div>
+
+          <br>
+
+          <div>
+            <label for="pass">Password:</label>
+            <input type="password" id="pass" name="pass" placeholder="SpongeBob342" required
+            maxlenght="12" minlenght="3">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="email">Email:</label>
+            <input type="email" placeholder="spongebob123@gmail.com" id="email" name="email">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="tel">phone #:</label>
+            <input type="tel" placeholder="(123)-456-7890" id="phone" name="phone">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="date">birthday:</label>
+            <input type="date" id="birthday" name="birthday">
+          </div>
+
+          <br>
+
+          <div>
+            <label for="quantity">quantity:</label>
+            <input type="number" id="quantity" name="quantity" min="0" max="100" value="1">
+          </div>
+
+          <br>
+
+          <div>
+            
+            <label>Mr.</label>
+            <input type="radio" name="title">
+
+            <label>Mrs.</label>
+            <input type="radio" name="title">
+
+            <label>PhD.</label>
+            <input type="radio" name="title">
+
+          </div>
+
+          <br>
+
+          <div>
+            <label for="payment">payment:</label>
+            <select name="payment" id="payments">
+              <option value="visa">visa</option>
+              <option value="mastercard">mastercard</option>
+              <option value="giftcard">giftcard</option>
+            </select>
+          </div>
+
+          <br>
+
+          <div>
+            <label for="checkbox">Do you like forms:</label>
+            <input type="checkbox" id="quantity" name="do-you-like-it">
+          </div>
+
+          <br>
+
+          <div>
+            <input type="reset">
+            <input type="submit">
+          </div>
+
+        </form>
+      </section>
+
+      <hr>
+
+      <!-- =-============================================================================= -->
+
+      <!--  !!! IMPORTANT !!!
+        <span> - inline container to group elements for styling purpose
+        <div> - block container to group elements for styling purpose  -->
+      <section>
+        <h2>JAVASRIPT TUTORIAL starts from here</h2>
+        <p id="firstwordinthejavascriptsection">Hello</p>
+        <p id="firstletter">a</p>
+      </section>
+  </main>
+  <footer class="footer"></footer>
+
+  <script src="index.js"></script>
 
 </body>
 
