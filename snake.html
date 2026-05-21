@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Snake Game</title>
+    <link rel="stylesheet" href="snake.css">
+</head>
+<body>
+    <div id="central-layout">
+        <!-- Header & Dashboard -->
+        <div id="game-header">
+            <h1>ADVANCED <span class="green-text">SNAKE</span> GAME</h1>
+            <div id="dashboard">
+                <div class="stat-capsule">SCORE: <span id="score">0</span></div>
+                <div class="stat-capsule">HIGH SCORE: <span id="high-score">0</span></div>
+                
+                <!-- Wallpaper Uploader Control -->
+                <label for="bg-uploader" class="upload-btn">🖼️ Change Map Wall</label>
+                <input type="file" id="bg-uploader" accept="image/*">
+            </div>
+            <div id="info-banner">Press Any Key to Control the Snake</div>
+        </div>
+
+        <!-- Main Display Arena -->
+        <div id="main-arena">
+            <!-- Left Panel: Trophy Room -->
+            <div class="side-panel">
+                <h3>🏆 Achievements (<span id="ach-count">0</span>/10)</h3>
+                <div id="achievements-box" class="scroll-container"></div>
+            </div>
+
+            <!-- Center: Canvas Map Window -->
+            <div id="canvas-container">
+                <canvas id="gameCanvas" width="600" height="600"></canvas>
+            </div>
+
+            <!-- Right Panel: Fruit Points Guide -->
+            <div class="side-panel">
+                <h3>🍎 Real Fruits Menu</h3>
+                <div id="menu-box" class="scroll-container"></div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Smooth Slide Toast Popup -->
+    <div id="toast" class="hidden-toast">
+        <div class="toast-bell">🌟</div>
+        <div>
+            <div style="font-weight: bold; color: #4eff9e;">ACHIEVEMENT UNLOCKED!</div>
+            <div id="toast-title" style="font-size: 0.9rem; color: #fff;"></div>
+        </div>
+    </div><br>
+
+    <p>Menu</p><br>
+  <a href="index.html">Back to main</a>
+  <script src="snake.js"></script>
+</body>
+</html>
+
+

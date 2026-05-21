@@ -479,7 +479,7 @@ console.log("Happy New Year");
 //-------------------------------------------------------
 // Number Guessing Game
 
-
+/*
 const minNum = 1;
 const maxNum = 100;
 const aNswer = Math.round(Math.floor(Math.random() * (maxNum - minNum + 1)) + minNum);
@@ -554,4 +554,27 @@ do {
   att++;
   } 
 }while (running)
+*/
 
+
+//-------------------------------------------------------
+// Temperature conversion program
+
+const temperaturebox = document.getElementById("temperaturebox");
+const toFahrenheit = document.getElementById("toFahrenheit");
+const toCelsius = document.getElementById("toCelsius");
+const conversionrs = document.getElementById("conversion-result");
+let conversiontemp;
+
+function convert() {
+  
+  if (toFahrenheit.checked) {
+    conversionrs.textContent = "You Selected to Fahrenheit";
+  }
+  else if (toCelsius.checked) {
+    conversionrs.textContent = "You selected to Celsius";
+  }
+  else {
+    conversionrs.textContent = "Select unit";
+  }
+};
