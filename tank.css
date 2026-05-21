@@ -1,0 +1,179 @@
+:root {
+    --bg-dark: #07090e;
+    --panel-bg: rgba(15, 22, 36, 0.85);
+    --neon-blue: #00f3ff;
+    --neon-amber: #ffaa00;
+    --neon-red: #ff3366;
+    --text-color: #e2f1f8;
+}
+
+body {
+    background: radial-gradient(circle at center, #101a2e 0%, var(--bg-dark) 100%);
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#game-container {
+    display: flex;
+    gap: 30px;
+    max-width: 1150px;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Боковая панель магазина и улучшений */
+#sidebar {
+    background: var(--panel-bg);
+    border: 2px solid rgba(0, 243, 255, 0.15);
+    border-radius: 16px;
+    width: 280px;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+    backdrop-filter: blur(10px);
+}
+
+h2 {
+    font-size: 1.1rem;
+    letter-spacing: 1.5px;
+    margin-top: 0;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding-bottom: 8px;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+.stat-row {
+    font-size: 1.1rem;
+    margin: 12px 0;
+    font-weight: 600;
+}
+
+.stat-row .val {
+    color: var(--neon-amber);
+    font-size: 1.3rem;
+    float: right;
+}
+
+.hint {
+    font-size: 0.8rem;
+    color: #8a9fc4;
+    margin-bottom: 15px;
+}
+
+/* Карточки улучшений */
+.upgrade-card {
+    background: rgba(0,0,0,0.3);
+    border: 1px solid rgba(255,255,255,0.05);
+    border-radius: 10px;
+    padding: 12px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+}
+
+.upgrade-card:hover {
+    border-color: var(--neon-blue);
+    background: rgba(0, 243, 255, 0.05);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.1);
+}
+
+.cost {
+    color: var(--neon-amber);
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+.level {
+    background: rgba(0, 243, 255, 0.2);
+    color: var(--neon-blue);
+    padding: 4px 8px;
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: 0.75rem;
+}
+
+#msg-box {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: var(--neon-red);
+    text-align: center;
+    min-height: 20px;
+}
+
+/* Главная панель игры */
+#main-arena {
+    display: flex;
+    flex-direction: column;
+}
+
+#game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 0;
+    font-size: 1.8rem;
+    letter-spacing: 3px;
+    font-weight: 800;
+}
+
+h1 .accent {
+    color: var(--neon-red);
+    text-shadow: 0 0 10px rgba(255, 51, 102, 0.4);
+}
+
+/* Полоска здоровья игрока */
+#hp-bar-container {
+    display: flex;
+    flex-direction: column;
+    width: 250px;
+}
+
+#hp-bar-outer {
+    background: #141923;
+    border: 1px solid rgba(255,255,255,0.1);
+    height: 16px;
+    border-radius: 4px;
+    overflow: hidden;
+}
+
+#hp-bar-inner {
+    background: linear-gradient(90deg, #ff3366, #ff6688);
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 10px rgba(255, 51, 102, 0.5);
+    transition: width 0.15s ease;
+}
+
+#canvas-wrapper {
+    border: 3px solid rgba(0, 243, 255, 0.3);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.6);
+}
+
+canvas {
+    display: block;
+    cursor: crosshair;
+    background: #0b111e;
+}
+
+#controls-hint {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #8a9fc4;
+    text-align: center;
+}

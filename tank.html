@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Advanced Tank Arena</title>
+    <link rel="stylesheet" href="tank.css">
+</head>
+<body>
+    <div id="game-container">
+        <!-- Левая панель: Статистика и Прокачка -->
+        <div id="sidebar">
+            <h2>🛡️ TANK STATUS</h2>
+            <div class="stat-row">Kills: <span id="kills-count" class="val">0</span></div>
+            <div class="stat-row">Scrap Metal: <span id="scrap-count" class="val">0</span></div>
+            
+            <h2 style="margin-top: 30px;">🛠️ UPGRADE SHOP</h2>
+            <p class="hint">Spend Scrap Metal to upgrade:</p>
+            
+            <div class="upgrade-card" onclick="buyUpgrade('maxHp')">
+                <div><strong>Heavy Armor (+Max HP)</strong><br><span id="cost-maxHp" class="cost">Cost: 30 Scrap</span></div>
+                <div id="lvl-maxHp" class="level">Lvl 1</div>
+            </div>
+
+            <div class="upgrade-card" onclick="buyUpgrade('damage')">
+                <div><strong>Plasma Cannon (+Damage)</strong><br><span id="cost-damage" class="cost">Cost: 40 Scrap</span></div>
+                <div id="lvl-damage" class="level">Lvl 1</div>
+            </div>
+
+            <div class="upgrade-card" onclick="buyUpgrade('speed')">
+                <div><strong>Turbo Engine (+Speed)</strong><br><span id="cost-speed" class="cost">Cost: 35 Scrap</span></div>
+                <div id="lvl-speed" class="level">Lvl 1</div>
+            </div>
+
+            <div class="upgrade-card" onclick="buyUpgrade('fireRate')">
+                <div><strong>Hyper Loader (-Cooldown)</strong><br><span id="cost-fireRate" class="cost">Cost: 50 Scrap</span></div>
+                <div id="lvl-fireRate" class="level">Lvl 1</div>
+            </div>
+            
+            <div id="msg-box"></div>
+        </div>
+
+        <!-- Центральная игровая зона -->
+        <div id="main-arena">
+            <div id="game-header">
+                <h1>TANK<span class="accent">ARENA</span>.JS</h1>
+                <div id="hp-bar-container">
+                    <span style="font-size: 0.8rem; font-weight: bold; margin-bottom: 3px;">TANK HULL INTEGRITY</span>
+                    <div id="hp-bar-outer"><div id="hp-bar-inner"></div></div>
+                </div>
+            </div>
+            
+            <div id="canvas-wrapper">
+                <canvas id="tankCanvas" width="800" height="600"></canvas>
+            </div>
+            
+            <div id="controls-hint">🎒 <strong>Controls:</strong> WASD / Arrow Keys to Move | <strong>Mouse</strong> to Aim | <strong>Left Click</strong> to Fire Plasma Bolt</div>
+        </div>
+    </div>
+
+    <script src="tank.js"></script>
+</body>
+</html>
