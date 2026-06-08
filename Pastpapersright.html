@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Past Papers</title>
+    <link rel="stylesheet" href="Pastpapersright.css">
+</head>
+<body>
+
+    <!-- MAIN HOME PAGE -->
+    <div id="homePage" class="view">
+        <header class="home-header">
+            <h1 class="main-title">Past Papers</h1>
+            <p class="subtitle">Select a subject from the menu below to view available GCSE resources.</p>
+        </header>
+        
+        <nav class="subject-menu">
+            <!-- JavaScript will insert menu items dynamically here -->
+        </nav>
+    </div>
+
+    <!-- SUBJECT PAPERS PAGE (Green Theme) -->
+    <div id="subjectPage" class="view hidden">
+        <header class="subject-header">
+            <button id="backBtn" class="btn-back">← Back to Menu</button>
+            <h2 id="currentSubjectTitle">Subject Name</h2>
+        </header>
+
+        <main class="content-container">
+            <div id="papersList">
+                <!-- JavaScript will insert the titled past paper series and link layouts here -->
+            </div>
+        </main>
+    </div>
+
+    <script src="Pastpapersright.js"></script>
+</body>
+</html>
+
